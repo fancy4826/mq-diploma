@@ -121,8 +121,18 @@ body {
 
 .about-blog_tittle {
   font-weight: 700;
-  font-size: 26px;
+  font-size: 1.625rem;
   text-align: center;
+}
+
+.main-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trends__block {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .trend__cards {
@@ -137,6 +147,40 @@ body {
   
   position: relative;
   z-index: 0;
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+  .trend__cards {
+    width: calc(50% - 3px);
+
+    margin-right: 3px;
+  }
+
+  .trend__cards:nth-child(2n) {
+    margin-right: 0;
+
+    width:50%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 641px) {
+  .trends__block .trend__cards{
+    width: calc(25% - 3px);
+
+    margin-right: 3px;
+  }
+
+  .trends__block .trend__cards:nth-child(2n) {
+    width: calc(25% - 3px);
+
+    margin-right: 3px;
+  }
+
+  .trends__block .trend__cards:nth-child(4) {
+    margin-right: 0;
+
+    width: 25%;
+  }
 }
 
 .trend__cards::after {
@@ -193,12 +237,13 @@ body {
 .main__aside-block {
   width: 100%;
   padding: 0 15px;
+  margin: 0;
 }
 
 .card {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 35px;
+  margin: 35px 0 0;
 }
 
 .card::after {
@@ -215,10 +260,6 @@ body {
 }
 
 .card-img {
-  width: 100%;
-}
-
-.card-text-section {
   width: 100%;
 }
 
@@ -509,6 +550,15 @@ body {
   color: #b59f5b;
 }
 
+.shop__container {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  padding: 0 15px;
+}
+
 .shop-item {
   display: flex;
   flex-direction: column;
@@ -707,6 +757,9 @@ body {
   top: 0px;
 
 
+
+
+
   display: none;
 }
 
@@ -832,4 +885,108 @@ body {
   text-transform: uppercase;
 }
 
+.popup__button:focus {
+  background-color: #323232;
+}
 
+@media (min-width: 641px) and (max-width: 1200px) {
+  .header {  
+    background-image: url("../images/banner-bg-tablet.jpg");
+  }
+  
+  .head-container {
+    padding: 0 34px;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu-burger__header {
+    width: 23px;
+    margin-top: 53px;
+    
+    align-self: flex-start;
+
+    order: 2;
+  }
+
+  .logo {
+    width: 158px;
+
+    margin-top: 43px;
+
+    order: 1;
+  }
+
+  .about-blog {
+    width: 100%;
+    margin: 105px 0 125px;
+    padding: 0 44px;
+
+    order: 3;
+  }
+  
+  .about-blog_tittle {
+    font-size: 2.5rem;
+  }
+
+  .trends__block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .trend__cards {
+    width: calc(50% - 3px);
+
+    margin-right: 3px;
+  }
+
+  .trend__cards:nth-child(2n) {
+    margin-right: 0;
+
+    width:50%;
+  }
+
+  .main__aside-block {
+    width: 58.75%;
+
+    padding: 0 34px;
+  }
+
+  .card__filling__name {
+    margin: 10px 0 0;
+  }
+
+  .aside-block {
+    width: 41.25%;
+
+    padding-right: 34px;
+  }
+
+  .shop__container {
+    width: 100%;
+    padding: 0 34px;
+
+    justify-content: space-between;
+  }
+
+  .shop-item {
+    width: calc(50% - 57px);
+  }
+
+  .footer {
+    padding: 0 34px;
+  }
+
+  .popup__content {
+    width: 390px;
+    height: 596px;
+
+    padding: 0 30px;
+  }
+
+  .feedback__text {
+    width: 330px;
+  }
+}
