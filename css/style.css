@@ -128,6 +128,7 @@ body {
 .main-block {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .trends__block {
@@ -149,7 +150,7 @@ body {
   z-index: 0;
 }
 
-@media (orientation: landscape) and (max-width: 768px) {
+@media (orientation: landscape) and (max-width: 640px) {
   .trend__cards {
     width: calc(50% - 3px);
 
@@ -163,7 +164,7 @@ body {
   }
 }
 
-@media (orientation: landscape) and (min-width: 769px) {
+@media (orientation: landscape) and (min-width: 641px) {
   .trends__block .trend__cards{
     width: calc(25% - 3px);
 
@@ -331,6 +332,7 @@ body {
 }
 
 .name-aside {
+  width: 100%;
   margin: 44px auto 24px;
 }
 
@@ -726,6 +728,10 @@ body {
   padding: 0;
 }
 
+.copyright__link {
+  text-decoration: none;
+}
+
 .copyright-tittle {
   text-align: center;
   
@@ -937,7 +943,7 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   .trend__cards {
     width: calc(50% - 3px);
 
@@ -1008,7 +1014,7 @@ body {
   }
 
   .head-container {
-    padding: 0 245px;
+    width: 1200px;
     margin: 0;
 
     flex-direction: row;
@@ -1059,15 +1065,17 @@ body {
     font-size: 2.813rem;
   }
 
+  .card__filling__name:hover {
+    color: #b59f5b;
+  }
+
   .main__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    width: 100%;
-
-    padding: 0 245px;
-    margin: 0;
+    width: 1200px;
+    margin: 0 auto;
   }
 
   .main__aside-block {
@@ -1096,6 +1104,10 @@ body {
 
   .card-header_name {
     font-size: 1.25rem;
+  }
+
+  .card-header_name:hover {
+    color: #b59f5b;
   }
 
   .tag-link:hover {
@@ -1137,6 +1149,10 @@ body {
     font-size: 0.875rem;
   }
 
+  .aside-card_name:hover {
+    color: #b59f5b;
+  }
+
   .search-button {
     min-width: 48px;
   }
@@ -1158,7 +1174,8 @@ body {
   }
 
   .shop__container {
-    padding: 0 245px;
+    width: 1200px;
+    margin: 0 245px;
   }
 
   .shop-item__header_name {
@@ -1176,7 +1193,8 @@ body {
   }
 
   .footer {
-    padding: 0 245px;
+    margin: 0 auto;
+    width: 1200px;
   }
 
   .popup__content {
