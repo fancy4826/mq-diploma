@@ -214,6 +214,7 @@ body {
 
 .card__filling {
   width: 100%;
+  min-width: 80%;
 
   border: 3px solid rgba(181, 159, 91, 0.6);
   margin: 88px 13px 13px;
@@ -233,6 +234,8 @@ body {
   color: #fff;
   
   margin: 12px 0 0;
+
+  overflow-wrap: break-word;
 }
 
 .main__aside-block {
